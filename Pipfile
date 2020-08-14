@@ -8,6 +8,15 @@ jupyter = "*"
 matplotlib = "*"
 
 [packages]
+flask = "*"
+pandas = "*"
+flask-sqlalchemy = "*"
+tweepy = "*"
+basilica = "*"
+python-dotenv = "*"
+scikit-learn = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
