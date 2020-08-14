@@ -1,16 +1,16 @@
 from os import getenv
 import basilica
-import twitter_scraper 
+from tweepy
 from dotenv import load_dotenv
 from .db_model import db, User, Tweet
 
 load_dotenv()
 
-TWITTER_AUTH = twitter_scraper.OAuthHandler(getenv('TWITTER_CONSUMER_API_KEY'),
+TWITTER_AUTH = tweepy.OAuthHandler(getenv('TWITTER_CONSUMER_API_KEY'),
                                    getenv('TWITTER_CONSUMER_API_SECRET'))
 TWITTER_AUTH.set_access_token(getenv('TWITTER_ACCESS_TOKEN'),
                               getenv('TWITTER_ACCESS_TOKEN_SECRET'))
-TWITTER = twitter_scraper.API(TWITTER_AUTH)
+TWITTER = tweepy.API(TWITTER_AUTH)
 BASILICA = basilica.Connection(getenv('BASILICA_KEY'))
 
 
